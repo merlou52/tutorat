@@ -51,7 +51,14 @@ public class Portefeuille {
     }
 
     public void argentFacile(double[][] taux, int monnaieDepart, int monnaieArrivee){
+        double taux_change = taux[monnaieArrivee][monnaieDepart];
+        double taux_change_inverse = taux[monnaieDepart][monnaieArrivee];
 
+        if(taux_change*taux_change_inverse > 1){
+            System.out.println("c'est interessant d'échanger "+this.devises[monnaieDepart]+" et des "+this.devises[monnaieArrivee]);
+        }else{
+            System.out.println("c'est pas interessant");
+        }
     }
 
     public static void main(String[] args){
