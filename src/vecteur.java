@@ -23,4 +23,18 @@ public class vecteur {
     public String toString(){
         return "x_a = " + this.x_a;
     }
+
+    public static void main(String[] args){
+        vecteur v1 = new vecteur(1,2,3,4);
+        vecteur v2 = new vecteur(5,6,7,8);
+        v1 = v2;
+        System.out.println(v1.x_a);
+        System.out.println(v2.x_a);
+        v1.x_a = 20;
+        System.out.println(v1.x_a);
+        System.out.println(v2.x_a);
+        v2.x_a = 40;
+        System.out.println(v1.x_a);
+        System.out.println(v2.x_a);
+    }
 }
